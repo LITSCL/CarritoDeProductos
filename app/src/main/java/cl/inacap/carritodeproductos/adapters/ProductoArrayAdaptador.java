@@ -41,5 +41,4 @@ public class ProductoArrayAdaptador extends ArrayAdapter<Producto> {
 
         return fila;
     }
-
 }

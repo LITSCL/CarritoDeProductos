@@ -59,6 +59,5 @@ public class CrearProductoActivity extends AppCompatActivity {
                 startActivity(new Intent(CrearProductoActivity.this, MainActivity.class));
             }
         });
-
     }
 }

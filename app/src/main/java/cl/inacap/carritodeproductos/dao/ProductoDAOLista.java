@@ -9,7 +9,7 @@ public class ProductoDAOLista implements ProductoDAO {
     private List<Producto> productos = new ArrayList<>();
     private static ProductoDAOLista instancia;
 
-    private ProductoDAOLista(){
+    private ProductoDAOLista() {
         Producto p = new Producto();
         p.setNombre("Coca cola Zero");
         p.setDescripcion("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac nulla fermentum, vulputate odio quis, sodales risus. Morbi nec fringilla leo, ut fringilla diam. Nam facilisis rutrum vehicula. Sed accumsan convallis neque.");

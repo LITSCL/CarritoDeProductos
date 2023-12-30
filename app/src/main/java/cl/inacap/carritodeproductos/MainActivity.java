@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Producto> productos;
     private ProductoArrayAdaptador adaptador;
     private ProductoDAO daoProductos = new ProductoDAOSQLite(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
         productos = daoProductos.getAll();
         adaptador = new ProductoArrayAdaptador(this,R.layout.productos_list,productos);

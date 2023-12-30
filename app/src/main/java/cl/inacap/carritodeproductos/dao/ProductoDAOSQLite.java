@@ -13,7 +13,7 @@ import cl.inacap.carritodeproductos.helpers.ProductoSQLiteHelper;
 public class ProductoDAOSQLite implements ProductoDAO {
     private ProductoSQLiteHelper productosHelper;
 
-    public ProductoDAOSQLite(Context context){
+    public ProductoDAOSQLite(Context context) {
         this.productosHelper = new ProductoSQLiteHelper(context, "dbcarritodeproductos", null, 3);
     }
 
@@ -47,7 +47,7 @@ public class ProductoDAOSQLite implements ProductoDAO {
     public Producto save(Producto p) {
         SQLiteDatabase writer = this.productosHelper.getWritableDatabase();
         String sql = String.format("INSERT INTO producto(nombre,descripcion,precio,foto)" +
-                " VALUES ('%s','%s','%d','%s')", p.getNombre(), p.getDescripcion(), p.getPrecio(), p.getFoto());
+            " VALUES ('%s','%s','%d','%s')", p.getNombre(), p.getDescripcion(), p.getPrecio(), p.getFoto());
         writer.execSQL(sql);
         writer.close();
         return p;
